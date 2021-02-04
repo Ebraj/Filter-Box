@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+  background-color: #212121;
+}
+
+.form-container form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+}
+
+@media screen and (max-width: 400px) {
+  .form-container form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.form-container form #input-section {
+  min-height: 45px;
+  border: none;
+  padding: 0 20px;
+  background-color: #29292B;
+  color: #969B9C;
+  font-size: 1.05rem;
+  outline: none;
+  border-radius: 2px;
+}
+
+.form-container form #submit-btn {
+  background-color: #6B6BF3;
+  border: none;
+  color: #fff;
+  font-size: 1.05rem;
+  border-radius: 2px;
+  margin-left: 5px;
+  min-height: 45px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .form-container form #submit-btn {
+    margin-left: 0;
+    margin-top: 2px;
+  }
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px 10px;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 20px;
+}
+
+.grid-container > div {
+  padding: 20px;
+  background-color: #29292B;
+}
+
+.grid-container > div > h2 {
+  color: #fff;
+  padding: 10px 0;
+}
+
+.grid-container > div > p {
+  color: #969B9C;
+}
+
+.container-1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.featured-area {
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #6B6BF3;
+}
+/*# sourceMappingURL=style.css.map */

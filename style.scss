@@ -1,0 +1,98 @@
+// Google Font IBM Plex Mono
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+// Colors
+$primary-dark-color : #212121;
+$secondary-dark-color : #29292B;
+$primary-grey-color : #4A4A4A;
+$secondary-grey-color : #969B9C;
+$primary-white-color : #fff;
+$primary-blue-color : #6B6BF3;
+
+// Global CSS
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+body{
+    background-color: $primary-dark-color;
+}
+
+//Styling the main Elements
+.form-container{
+    form{
+        width: 100%;
+        display: grid;
+        // grid-column-gap: 10px;
+        grid-template-columns: 80% 20%;
+
+        @media screen and (max-width:400px){
+            grid-template-columns: 1fr;
+        }
+        #input-section{
+            min-height: 45px;
+            border: none;
+            padding: 0 20px;
+            background-color: $secondary-dark-color;
+            color: $secondary-grey-color;
+            font-size: 1.05rem;
+            outline: none;
+            border-radius: 2px;
+        }
+        #submit-btn{
+            background-color: $primary-blue-color;
+            border: none;
+            color: $primary-white-color;
+            font-size: 1.05rem;
+            border-radius: 2px;
+            margin-left: 5px;
+            min-height: 45px;
+            cursor: pointer;
+            @media screen and (max-width:400px){
+                margin-left: 0;
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+.grid-container{
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    margin-top: 20px;
+
+    >div{
+        padding: 20px;
+        background-color: $secondary-dark-color;
+
+        >h2{
+            color: $primary-white-color;
+            padding: 10px 0;
+        }
+        >p{
+        color: $secondary-grey-color;
+        }
+    }
+}
+
+// Extra Classes
+.container-1000{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.featured-area{
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    color: $primary-white-color;
+    background-color: $primary-blue-color;
+}
