@@ -1,41 +1,58 @@
-// Google Font IBM Plex Mono
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+//Sofia font
+@font-face {
+    font-family: "sofia-regualr";
+    src: url(./fonts/sofia-regular.otf);
+}
+@font-face {
+    font-family: "sofia-bold";
+    src: url(./fonts/sofia-bold.otf);
+}
 
 // Colors
-$primary-dark-color : #212121;
-$secondary-dark-color : #29292B;
+$primary-dark-color : #12181b;
+$secondary-dark-color : #2a2e35;
 $primary-grey-color : #4A4A4A;
 $secondary-grey-color : #969B9C;
 $primary-white-color : #fff;
 $primary-blue-color : #6B6BF3;
 
 // Global CSS
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: "sofia-regular", sans-serif;
 }
-body{
+h2{
+    font-family: "sofia-bold",Arial, Helvetica, sans-serif;
+}
+p{
+    line-height: 1.5;
+    font-size: 1.15rem;
+}
+body {
     background-color: $primary-dark-color;
 }
 
 //Styling the main Elements
-.form-container{
-    form{
+.form-container {
+    form {
         width: 100%;
         display: grid;
         // grid-column-gap: 10px;
         grid-template-columns: 80% 20%;
 
-        @media screen and (max-width:400px){
+        @media screen and (max-width:400px) {
             grid-template-columns: 1fr;
         }
-        #input-section{
+
+        #input-section {
             min-height: 45px;
             border: none;
             padding: 0 20px;
@@ -45,7 +62,8 @@ body{
             outline: none;
             border-radius: 2px;
         }
-        #submit-btn{
+
+        #submit-btn {
             background-color: $primary-blue-color;
             border: none;
             color: $primary-white-color;
@@ -54,7 +72,9 @@ body{
             margin-left: 5px;
             min-height: 45px;
             cursor: pointer;
-            @media screen and (max-width:400px){
+            outline: none;
+
+            @media screen and (max-width:400px) {
                 margin-left: 0;
                 margin-top: 2px;
             }
@@ -62,33 +82,35 @@ body{
     }
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-gap: 10px 10px;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin-top: 20px;
 
-    >div{
+    >div {
         padding: 20px;
         background-color: $secondary-dark-color;
 
-        >h2{
+        >h2 {
             color: $primary-white-color;
-            padding: 10px 0;
+            padding: 15px 0;
         }
-        >p{
-        color: $secondary-grey-color;
+
+        >p {
+            color: $secondary-grey-color;
         }
     }
 }
 
 // Extra Classes
-.container-1000{
+.container-1000 {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
-.featured-area{
+
+.featured-area {
     font-weight: 300;
     font-size: 1.2rem;
     padding: 5px;

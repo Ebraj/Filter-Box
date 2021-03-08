@@ -1,4 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "sofia-regualr";
+  src: url(./fonts/sofia-regular.otf);
+}
+
+@font-face {
+  font-family: "sofia-bold";
+  src: url(./fonts/sofia-bold.otf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,14 +15,24 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "sofia-regular", sans-serif;
+}
+
+h2 {
+  font-family: "sofia-bold",Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.15rem;
 }
 
 body {
-  background-color: #212121;
+  background-color: #12181b;
 }
 
 .form-container form {
@@ -35,7 +54,7 @@ body {
   min-height: 45px;
   border: none;
   padding: 0 20px;
-  background-color: #29292B;
+  background-color: #2a2e35;
   color: #969B9C;
   font-size: 1.05rem;
   outline: none;
@@ -51,6 +70,7 @@ body {
   margin-left: 5px;
   min-height: 45px;
   cursor: pointer;
+  outline: none;
 }
 
 @media screen and (max-width: 400px) {
@@ -71,12 +91,12 @@ body {
 
 .grid-container > div {
   padding: 20px;
-  background-color: #29292B;
+  background-color: #2a2e35;
 }
 
 .grid-container > div > h2 {
   color: #fff;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .grid-container > div > p {
